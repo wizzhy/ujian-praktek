@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('menu', 'Home::menu');
 $routes->get('menu/(:segment)', 'Home::detail/$1');
+$routes->post('order/process', 'Home::orderProcess');
 
 // Authentication Routes
 $routes->get('login', 'Auth::login');
