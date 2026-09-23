@@ -1,69 +1,93 @@
-# CodeIgniter 4 Application Starter
+# Aprilianto's Tinutuan — Website Modern Promosi Makanan Khas Manado
 
-## What is CodeIgniter?
+![Tinutuan Banner](public/uploads/menu/hero_tinutuan.jpg)
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Website resmi promosi kuliner autentik **Tinutuan (Bubur Manado)** berbasis **CodeIgniter 4 + Tailwind CSS + MySQL**, dirancang dengan standar franchise makanan modern berkelas (seperti KFC, Burger Bangor, Pizza Hut, Five Guys) untuk mengangkat makanan khas daerah Sulawesi Utara ke level yang lebih tinggi.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+---
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 📋 Data Ujian Praktik On The Spot Coding
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+| Informasi | Keterangan |
+| :--- | :--- |
+| **No. Peserta** | **23** |
+| **Nama Siswa** | **Wisnu Aprilianto** |
+| **Nama Restoran** | **Aprilianto's Tinutuan** (*Autentik Manado Rasa Nusantara*) |
+| **Daerah Asal** | **Sulawesi Utara** |
+| **Makanan Khas** | **Tinutuan (Bubur Manado)** |
+| **Warna Utama / Primer** | `#9333EA` (Purple / Ungu Modern) |
+| **Warna Sekunder / Aksen** | `#FBBF24` (Amber / Kuning Emas) |
+| **Fitur Khusus** | **Filter** (Kategori Menu, Pencarian Realtime, Level Kepedasan, Sorting Harga) |
+| **Validasi** | **Validasi Form** (Validasi Form Tambah/Edit Menu Admin & Form Pemesanan Cepat) |
 
-## Installation & updates
+---
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## ✨ Fitur-Fitur Utama Website
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+1. **Halaman Depan (*Homepage*) Modern**:
+   - Hero Section atraktif dengan tipografi modern (*Outfit* & *Plus Jakarta Sans*), micro-interaction, dan visual hidangan Tinutuan AI definisi tinggi.
+   - Section Filosofi & Khasiat Sehat Tinutuan (*Superfood* tradisional bebas kolesterol, kaya serat labu kuning manis *sambiki*, kangkung, bayam, kemangi, dan cakalang fufu).
+   - Section Menu Pilihan dengan **Filter Kategori Interaktif langsung di beranda**.
+   - Paket Promo Komplit Juara & Testimoni Pelanggan.
+   - Footer lengkap identitas restoran dan outlet Manado.
 
-## Setup
+2. **Katalog Menu & Fitur Filter Lengkap (`/menu`)**:
+   - Filter Kategori (*Tinutuan Spesial*, *Paket Komplit*, *Gorengan & Pelengkap*, *Minuman & Dessert*).
+   - Filter Tingkat Kepedasan (*Level 0 - Tidak Pedas* hingga *Level 3 - Ekstra Pedas Manado*).
+   - Pencarian Instan berdasarkan nama atau komposisi bahan.
+   - Pengurutan harga (Termurah &rarr; Termahal).
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+3. **Halaman Detail Makanan (`/menu/{slug}`)**:
+   - Foto hidangan AI definisi tinggi dengan badge status dan rekomendasi.
+   - Uraian lengkap cita rasa, kandungan kalori (kkal), tingkat kepedasan cabai rawit, dan *chips* komposisi bahan alami.
+   - **Formulir Pemesanan Cepat** dengan **Validasi Form** (Nama, No WhatsApp, Jumlah Porsi, Catatan).
+   - Rekomendasi 3 menu pelengkap lainnya.
 
-## Important Change with index.php
+4. **Autentikasi & Panel Admin CRUD (`/login` & `/admin/menu`)**:
+   - Halaman Login Admin elegan terlindungi sistem session & hashing password Bcrypt.
+   - Manajemen Menu: **Tambah Menu**, **Lihat Daftar Menu**, **Edit Menu**, dan **Hapus Menu**.
+   - **Validasi Form** komprehensif pada input form:
+     - Nama menu wajib diisi (minimal 3 karakter).
+     - Kategori wajib dipilih.
+     - Harga wajib berupa angka dan lebih dari Rp 0.
+     - Deskripsi makanan minimal 10 karakter.
+     - Komposisi bahan minimal 5 karakter.
+     - Validasi berkas unggahan gambar (JPG, PNG, WEBP, maks 3MB) atau pemilihan dari galeri aset AI.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+---
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## 🍲 10 Variasi Menu yang Tersedia
 
-**Please** read the user guide for a better explanation of how CI4 works!
+1. **Tinutuan Original Manado Spesial** (Rp 22.000)
+2. **Tinutuan Cakalang Fufu Suwir** (Rp 32.000)
+3. **Tinutuan Sambal Roa Komplit** (Rp 35.000)
+4. **Tinutuan Seafood Kuah Kuning** (Rp 38.000)
+5. **Paket Komplit Tinutuan Juara** (Rp 42.000)
+6. **Paket Sarapan Sultan Manado** (Rp 48.000)
+7. **Perkedel Jagung Manado Crispy** (Rp 18.000)
+8. **Pisang Goreng Goroho Sambal Roa** (Rp 24.000)
+9. **Es Brenebon Kacang Merah Manado** (Rp 20.000)
+10. **Klappertaart Panggang Mini Autentik** (Rp 25.000)
 
-## Repository Management
+---
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## 🔐 Akun Demo Admin
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+- **URL Login**: `http://localhost/ujian_praktek_pakrinto/public/login`
+- **Username**: `admin`
+- **Password**: `admin123`
 
-## Server Requirements
+---
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+## 🚀 Panduan Menjalankan Projek
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+1. **Pastikan Web Server Apache & MySQL aktif** (via XAMPP).
+2. Database akan otomatis tersambung ke `ujian_praktek` di port `3306`.
+3. Jalankan migration dan seeder jika belum:
+   ```bash
+   php spark migrate
+   php spark db:seed DatabaseSeeder
+   ```
+4. Buka browser pada alamat:
+   - **Frontend**: [http://localhost/ujian_praktek_pakrinto/public/](http://localhost/ujian_praktek_pakrinto/public/)
+   - **Login Admin**: [http://localhost/ujian_praktek_pakrinto/public/login](http://localhost/ujian_praktek_pakrinto/public/login)
