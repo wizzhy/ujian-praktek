@@ -42,35 +42,31 @@
             width: 8px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0f172a;
+            background: #f1f5f9;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #9333ea;
+            background: #cbd5e1;
             border-radius: 9999px;
         }
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 0.2; transform: scale(1); }
-            50% { opacity: 0.35; transform: scale(1.05); }
-        }
-        .animate-pulse-slow {
-            animation: pulse-slow 8s infinite ease-in-out;
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-primary selection:text-white custom-scrollbar">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-primary selection:text-white custom-scrollbar">
 
     <!-- Top Utility Bar -->
-    <div class="bg-slate-900/90 border-b border-slate-800/80 text-xs py-2 px-4">
+    <div class="bg-purple-900 text-purple-100 text-xs py-2 px-4 border-b border-purple-950">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <div class="flex items-center space-x-3 text-slate-300">
-                <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-300 font-semibold text-[11px] border border-purple-500/20">
+            <div class="flex items-center space-x-3">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-white/10 text-white font-semibold text-[11px]">
                     Sulawesi Utara
                 </span>
-                <span class="hidden sm:inline text-slate-400 text-xs">Kuliner Tradisional Bubur Manado Autentik & Segar</span>
+                <span class="hidden sm:inline text-purple-200 text-xs">Kuliner Tradisional Bubur Manado Autentik & Segar</span>
             </div>
-            <div class="flex items-center space-x-6 text-slate-400 text-xs">
-                <span class="hidden md:inline"><i class="fa-regular fa-clock mr-1.5 text-accent"></i> 06.30 - 22.00 WITA</span>
-                <a href="<?= base_url('login') ?>" class="text-slate-400 hover:text-accent font-medium flex items-center space-x-1.5 transition-colors">
+            <div class="flex items-center space-x-6 text-purple-200 text-xs">
+                <span class="hidden md:inline"><i class="fa-regular fa-clock mr-1.5 text-accent"></i> Buka 06.30 - 22.00 WITA</span>
+                <a href="<?= base_url('login') ?>" class="text-purple-200 hover:text-white font-medium flex items-center space-x-1.5 transition-colors">
                     <i class="fa-solid fa-lock text-[10px]"></i>
                     <span>Panel Admin</span>
                 </a>
@@ -79,46 +75,46 @@
     </div>
 
     <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/90 border-b border-slate-800/80 transition-all duration-300">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20 gap-4">
                 
                 <!-- Brand Logo -->
                 <a href="<?= base_url() ?>" class="flex items-center space-x-3.5 group flex-shrink-0">
-                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-purple-800 border border-purple-500/30 flex items-center justify-center text-accent shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-bowl-food text-xl"></i>
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-primary to-purple-800 flex items-center justify-center text-accent shadow-md shadow-primary/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-bowl-food text-xl text-amber-300"></i>
                     </div>
                     <div>
                         <div class="flex items-center space-x-1.5">
-                            <span class="font-display font-extrabold text-2xl tracking-tight text-white group-hover:text-amber-300 transition-colors">Aprilianto's</span>
-                            <span class="font-display font-extrabold text-2xl tracking-tight text-accent">Tinutuan</span>
+                            <span class="font-display font-black text-2xl tracking-tight text-slate-900">Aprilianto's</span>
+                            <span class="font-display font-black text-2xl tracking-tight text-primary">Tinutuan</span>
                         </div>
-                        <p class="text-[10px] tracking-wider uppercase font-semibold text-slate-400 mt-0.5">Autentik Manado</p>
+                        <p class="text-[10px] tracking-wider uppercase font-bold text-slate-400 mt-0.5">Autentik Manado</p>
                     </div>
                 </a>
 
                 <!-- Desktop Clean Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
-                    <a href="<?= base_url() ?>" class="px-3.5 py-2 rounded-xl text-sm font-semibold <?= uri_string() == '' ? 'text-white bg-slate-900/80' : 'text-slate-300 hover:text-white hover:bg-slate-900/50' ?> transition-colors">
+                    <a href="<?= base_url() ?>" class="px-4 py-2 rounded-xl text-sm font-semibold <?= uri_string() == '' ? 'text-primary bg-purple-50' : 'text-slate-600 hover:text-primary hover:bg-slate-50' ?> transition-colors">
                         Beranda
                     </a>
-                    <a href="<?= base_url('menu') ?>" class="px-3.5 py-2 rounded-xl text-sm font-semibold <?= uri_string() == 'menu' ? 'text-white bg-slate-900/80' : 'text-slate-300 hover:text-white hover:bg-slate-900/50' ?> transition-colors">
+                    <a href="<?= base_url('menu') ?>" class="px-4 py-2 rounded-xl text-sm font-semibold <?= uri_string() == 'menu' ? 'text-primary bg-purple-50' : 'text-slate-600 hover:text-primary hover:bg-slate-50' ?> transition-colors">
                         Katalog Menu
                     </a>
-                    <a href="<?= base_url() ?>#filosofi" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/50 transition-colors">
+                    <a href="<?= base_url() ?>#filosofi" class="px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors">
                         Filosofi
                     </a>
-                    <a href="<?= base_url() ?>#promo" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/50 transition-colors">
+                    <a href="<?= base_url() ?>#promo" class="px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors">
                         Paket Promo
                     </a>
-                    <a href="<?= base_url() ?>#kontak" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/50 transition-colors">
+                    <a href="<?= base_url() ?>#kontak" class="px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors">
                         Outlet
                     </a>
                 </nav>
 
                 <!-- Order Action Button -->
                 <div class="hidden sm:flex items-center space-x-3 flex-shrink-0">
-                    <a href="<?= base_url('menu') ?>" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-purple-600 hover:from-primary-light hover:to-primary text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-primary/30 transition-all flex items-center space-x-2">
+                    <a href="<?= base_url('menu') ?>" class="px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all flex items-center space-x-2">
                         <i class="fa-solid fa-utensils text-accent text-xs"></i>
                         <span>Pesan Menu</span>
                     </a>
@@ -126,10 +122,10 @@
 
                 <!-- Mobile Hamburger Button -->
                 <div class="flex md:hidden items-center space-x-2">
-                    <a href="<?= base_url('login') ?>" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-accent text-xs">
+                    <a href="<?= base_url('login') ?>" class="p-2 rounded-xl bg-slate-100 text-primary text-xs">
                         <i class="fa-solid fa-lock"></i>
                     </a>
-                    <button id="mobileMenuBtn" type="button" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+                    <button id="mobileMenuBtn" type="button" class="p-2 rounded-xl bg-slate-100 text-slate-700 hover:text-slate-900">
                         <i class="fa-solid fa-bars text-lg"></i>
                     </button>
                 </div>
@@ -137,18 +133,18 @@
         </div>
 
         <!-- Mobile Menu Drawer -->
-        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 backdrop-blur-2xl px-6 py-6 space-y-3">
-            <a href="<?= base_url() ?>" class="block py-2 text-sm font-semibold text-white hover:text-accent">Beranda</a>
-            <a href="<?= base_url('menu') ?>" class="block py-2 text-sm font-semibold text-slate-300 hover:text-accent">Katalog Menu & Filter</a>
-            <a href="<?= base_url() ?>#filosofi" class="block py-2 text-sm font-semibold text-slate-300 hover:text-accent">Filosofi Sehat</a>
-            <a href="<?= base_url() ?>#promo" class="block py-2 text-sm font-semibold text-slate-300 hover:text-accent">Paket Promo</a>
-            <a href="<?= base_url() ?>#kontak" class="block py-2 text-sm font-semibold text-slate-300 hover:text-accent">Outlet & Kontak</a>
-            <div class="pt-3 border-t border-slate-800 flex flex-col gap-2.5">
-                <a href="<?= base_url('menu') ?>" class="w-full text-center py-2.5 bg-gradient-to-r from-primary to-purple-600 text-white font-bold rounded-xl text-xs shadow-md">
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 bg-white px-6 py-6 space-y-3 shadow-lg">
+            <a href="<?= base_url() ?>" class="block py-2 text-sm font-semibold text-primary">Beranda</a>
+            <a href="<?= base_url('menu') ?>" class="block py-2 text-sm font-semibold text-slate-700 hover:text-primary">Katalog Menu & Filter</a>
+            <a href="<?= base_url() ?>#filosofi" class="block py-2 text-sm font-semibold text-slate-700 hover:text-primary">Filosofi Sehat</a>
+            <a href="<?= base_url() ?>#promo" class="block py-2 text-sm font-semibold text-slate-700 hover:text-primary">Paket Promo</a>
+            <a href="<?= base_url() ?>#kontak" class="block py-2 text-sm font-semibold text-slate-700 hover:text-primary">Outlet & Kontak</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+                <a href="<?= base_url('menu') ?>" class="w-full text-center py-2.5 bg-primary text-white font-bold rounded-xl text-xs shadow-sm">
                     <i class="fa-solid fa-utensils mr-2 text-accent"></i> Pesan Menu Sekarang
                 </a>
-                <a href="<?= base_url('login') ?>" class="w-full text-center py-2 bg-slate-900 border border-slate-700 text-slate-300 font-medium rounded-xl text-xs">
-                    <i class="fa-solid fa-lock mr-2 text-accent"></i> Panel Admin
+                <a href="<?= base_url('login') ?>" class="w-full text-center py-2 bg-slate-100 text-slate-700 font-medium rounded-xl text-xs">
+                    <i class="fa-solid fa-lock mr-2 text-primary"></i> Panel Admin
                 </a>
             </div>
         </div>

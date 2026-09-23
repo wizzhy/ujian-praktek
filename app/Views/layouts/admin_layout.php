@@ -63,7 +63,7 @@
                         <i class="fa-solid fa-bowl-food text-lg"></i>
                     </div>
                     <div>
-                        <span class="font-display font-extrabold text-lg tracking-tight bg-gradient-to-r from-purple-300 via-white to-amber-300 bg-clip-text text-transparent block">Aprilianto's</span>
+                        <span class="font-display font-extrabold text-lg tracking-tight text-white block">Aprilianto's</span>
                         <span class="text-[10px] tracking-widest uppercase font-semibold text-accent block">Tinutuan Manado</span>
                     </div>
                 </a>

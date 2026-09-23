@@ -5,24 +5,21 @@
 <div class="space-y-6">
 
     <!-- Top Action Banner -->
-    <div class="bg-gradient-to-r from-slate-900 via-purple-950 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
-        <div class="absolute right-0 top-0 w-80 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-accent/20 border border-accent/40 text-accent mb-2">
-                    <i class="fa-solid fa-fire mr-1.5"></i> CRUD Menu Makanan Khas Manado
-                </span>
-                <h1 class="font-display font-extrabold text-2xl sm:text-3xl tracking-tight">Manajemen Menu Tinutuan</h1>
-                <p class="text-sm text-slate-300 mt-1 max-w-xl">
-                    Kelola menu bubur Manado, lauk pelengkap, gorengan khas, dan dessert. Terdapat total <strong class="text-white font-bold"><?= esc($totalMenus) ?> variasi makanan</strong>.
-                </p>
-            </div>
-            <div>
-                <a href="<?= base_url('admin/menu/create') ?>" class="inline-flex items-center space-x-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-primary to-purple-600 hover:from-primary-light hover:to-primary text-white font-bold text-sm shadow-lg shadow-primary/40 hover:shadow-primary/60 transition-all duration-200">
-                    <i class="fa-solid fa-plus-circle text-accent text-base"></i>
-                    <span>Tambah Menu Baru</span>
-                </a>
-            </div>
+    <div class="bg-gradient-to-r from-purple-800 to-purple-950 rounded-3xl p-6 sm:p-8 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-amber-300 mb-2">
+                <i class="fa-solid fa-utensils mr-1.5"></i> CRUD Menu Makanan Khas Manado
+            </span>
+            <h1 class="font-display font-extrabold text-2xl sm:text-3xl tracking-tight">Manajemen Menu Tinutuan</h1>
+            <p class="text-sm text-purple-200 mt-1 max-w-xl">
+                Kelola menu bubur Manado, lauk pelengkap, gorengan khas, dan dessert. Terdapat total <strong class="text-white font-bold"><?= esc($totalMenus) ?> variasi makanan</strong>.
+            </p>
+        </div>
+        <div>
+            <a href="<?= base_url('admin/menu/create') ?>" class="inline-flex items-center space-x-2 px-5 py-3 rounded-2xl bg-accent hover:bg-amber-300 text-slate-950 font-bold text-sm shadow-sm transition-all">
+                <i class="fa-solid fa-plus-circle text-base"></i>
+                <span>Tambah Menu Baru</span>
+            </a>
         </div>
     </div>
 
