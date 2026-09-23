@@ -126,47 +126,75 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Item 1: Labu Kuning -->
-            <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-primary/50 transition-all duration-300 group">
-                <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                    🥣
+            <div class="rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 group shadow-xl flex flex-col">
+                <div class="aspect-[16/10] overflow-hidden bg-slate-950 relative">
+                    <img src="<?= base_url('uploads/menu/ing_labu_kuning.jpg') ?>" alt="Labu Kuning Manis (Sambiki)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-950/85 backdrop-blur-md text-amber-300 border border-amber-500/30 shadow">
+                        Kaya Vitamin A
+                    </span>
                 </div>
-                <h3 class="font-display font-bold text-base text-white group-hover:text-accent transition-colors">Labu Kuning Manis</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                    Dikenal sebagai <em>sambiki</em> di Manado, memberikan warna keemasan alami yang kaya antioksidan beta-karoten dan vitamin A.
-                </p>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display font-bold text-base text-white group-hover:text-accent transition-colors">Labu Kuning Manis</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                            Dikenal sebagai <em>sambiki</em> di Minahasa. Menghadirkan warna kuning keemasan alami dengan tekstur lembut, manis alami, dan kaya antioksidan beta-karoten.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Item 2: Aneka Sayuran Hijau -->
-            <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-primary/50 transition-all duration-300 group">
-                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                    🥬
+            <div class="rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 group shadow-xl flex flex-col">
+                <div class="aspect-[16/10] overflow-hidden bg-slate-950 relative">
+                    <img src="<?= base_url('uploads/menu/ing_sayur_segar.jpg') ?>" alt="Kangkung dan Bayam Segar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-950/85 backdrop-blur-md text-emerald-300 border border-emerald-500/30 shadow">
+                        Serat Tinggi
+                    </span>
                 </div>
-                <h3 class="font-display font-bold text-base text-white group-hover:text-accent transition-colors">Kangkung & Bayam Segar</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                    Perpaduan sayur kangkung dan bayam hijau yang kaya zat besi dan serat tinggi, membantu metabolisme tubuh tetap prima sepanjang hari.
-                </p>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display font-bold text-base text-white group-hover:text-accent transition-colors">Kangkung & Bayam Segar</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                            Dipetik segar setiap pagi. Perpaduan sayuran hijau bernutrisi tinggi kaya zat besi dan serat pangan alami yang menyehatkan metabolisme tubuh.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Item 3: Daun Kemangi Aromatik -->
-            <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-primary/50 transition-all duration-300 group">
-                <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                    🌿
+            <div class="rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 group shadow-xl flex flex-col">
+                <div class="aspect-[16/10] overflow-hidden bg-slate-950 relative">
+                    <img src="<?= base_url('uploads/menu/ing_kemangi.jpg') ?>" alt="Kemangi Aromatik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-950/85 backdrop-blur-md text-purple-300 border border-purple-500/30 shadow">
+                        Aroma Khas
+                    </span>
                 </div>
-                <h3 class="font-display font-bold text-base text-white group-hover:text-accent transition-colors">Kemangi Aromatik</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                    Aroma khas daun kemangi segar yang dimasak hangat memberikan keharuman menenangkan dan menyegarkan cita rasa khas pesisir Sulawesi.
-                </p>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display font-bold text-base text-white group-hover:text-accent transition-colors">Kemangi Aromatik</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                            Ciri khas wewangian autentik Tinutuan. Daun kemangi segar memberikan keharuman sitrun lembut yang menenangkan dan menggugah selera makan.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Item 4: Cakalang Fufu & Roa -->
-            <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-primary/50 transition-all duration-300 group">
-                <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                    🐟
+            <div class="rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 group shadow-xl flex flex-col">
+                <div class="aspect-[16/10] overflow-hidden bg-slate-950 relative">
+                    <img src="<?= base_url('uploads/menu/ing_cakalang_fufu.jpg') ?>" alt="Cakalang Fufu dan Roa Asap" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-950/85 backdrop-blur-md text-rose-300 border border-rose-500/30 shadow">
+                        Tinggi Protein
+                    </span>
                 </div>
-                <h3 class="font-display font-bold text-base text-white group-hover:text-accent transition-colors">Cakalang Fufu & Roa</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                    Ikan cakalang asap dan ikan roa Minahasa yang kaya protein omega-3 dengan sensasi aroma <em>smoky</em> yang tiada duanya di dunia.
-                </p>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display font-bold text-base text-white group-hover:text-accent transition-colors">Cakalang Fufu & Roa</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                            Ikan cakalang asap khas Bitung dan ikan roa Minahasa berkualitas premium dengan sensasi rasa gurih berkarakter dan kaya asam lemak Omega-3.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
