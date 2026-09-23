@@ -14,33 +14,33 @@
             <!-- Hero Text Content (7 cols) -->
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                 <!-- Pill Badge -->
-                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-900/90 border border-primary/40 backdrop-blur-md shadow-lg shadow-primary/20">
-                    <span class="w-2.5 h-2.5 rounded-full bg-accent animate-ping"></span>
-                    <span class="text-xs font-black uppercase tracking-widest text-accent">Superfood Tradisional Sulawesi Utara</span>
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-purple-500/30 backdrop-blur-md shadow-md">
+                    <span class="w-2 h-2 rounded-full bg-accent"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-accent">Kuliner Tradisional Sulawesi Utara</span>
                 </div>
 
                 <!-- Main Catchy Headline -->
                 <h1 class="font-display font-black text-4xl sm:text-6xl xl:text-7xl text-white tracking-tight leading-[1.08]">
-                    Nikmati Kelezatan <br class="hidden sm:inline">
+                    Kehangatan Autentik <br class="hidden sm:inline">
                     <span class="bg-gradient-to-r from-purple-400 via-amber-300 to-accent bg-clip-text text-transparent">Tinutuan Manado</span> <br>
-                    Level Waralaba Modern!
+                    Warisan Minahasa
                 </h1>
 
                 <!-- Subtitle -->
                 <p class="text-base sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                    Bubur Manado legendaris kaya sayuran segar, labu kuning manis, jagung pipil, dipadu gurihnya suwiran <strong>Cakalang Fufu Bitung</strong> dan pedas nampol <strong>Sambal Roa Asli Minahasa</strong>.
+                    Bubur Manado kaya sayuran segar, kelembutan labu kuning manis, pipilan jagung, serta gurihnya suwiran <strong>Cakalang Fufu Bitung</strong> berpadu pedas harum <strong>Sambal Roa</strong>.
                 </p>
 
                 <!-- Hero Action Buttons -->
-                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                    <a href="<?= base_url('menu') ?>" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-primary to-purple-700 hover:from-primary-light hover:to-primary text-white font-extrabold text-sm uppercase tracking-wider shadow-xl shadow-primary/40 hover:shadow-primary/70 transition-all duration-300 flex items-center justify-center space-x-3 group">
-                        <i class="fa-solid fa-bowl-food text-accent text-lg group-hover:rotate-12 transition-transform"></i>
-                        <span>Lihat Menu Lengkap & Order</span>
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="<?= base_url('menu') ?>" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-primary to-purple-600 hover:from-primary-light hover:to-primary text-white font-bold text-sm tracking-wide shadow-lg shadow-primary/30 transition-all duration-200 flex items-center justify-center space-x-2.5">
+                        <i class="fa-solid fa-utensils text-accent text-sm"></i>
+                        <span>Lihat Menu & Pesan</span>
                     </a>
 
-                    <a href="#filosofi" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-sm transition-all duration-200 flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-circle-play text-accent"></i>
-                        <span>Kenali Tinutuan</span>
+                    <a href="#filosofi" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-200 font-semibold text-sm transition-all duration-200 flex items-center justify-center space-x-2">
+                        <span>Tentang Tinutuan</span>
+                        <i class="fa-solid fa-arrow-down text-xs text-slate-400"></i>
                     </a>
                 </div>
 

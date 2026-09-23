@@ -59,98 +59,96 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-primary selection:text-white custom-scrollbar">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-primary via-purple-700 to-amber-500 text-white text-xs py-2 px-4 text-center font-bold tracking-wide flex items-center justify-center space-x-3 shadow-sm">
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-black/30 text-[10px] uppercase tracking-wider">
-            <i class="fa-solid fa-sparkles mr-1 text-accent"></i> Kuliner Khas Manado
-        </span>
-        <span>Sensasi Autentik Bubur Manado Tinutuan Tradisi Minahasa dengan Sentuhan Modern Waralaba!</span>
-        <a href="<?= base_url('menu') ?>" class="underline hover:text-accent font-extrabold hidden md:inline ml-2">Lihat 10 Menu Pilihan &rarr;</a>
+    <!-- Top Utility Bar -->
+    <div class="bg-slate-900/90 border-b border-slate-800/80 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3 text-slate-300">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-300 font-semibold text-[11px] border border-purple-500/20">
+                    Sulawesi Utara
+                </span>
+                <span class="hidden sm:inline text-slate-400 text-xs">Kuliner Tradisional Bubur Manado Autentik & Segar</span>
+            </div>
+            <div class="flex items-center space-x-6 text-slate-400 text-xs">
+                <span class="hidden md:inline"><i class="fa-regular fa-clock mr-1.5 text-accent"></i> 06.30 - 22.00 WITA</span>
+                <a href="<?= base_url('login') ?>" class="text-slate-400 hover:text-accent font-medium flex items-center space-x-1.5 transition-colors">
+                    <i class="fa-solid fa-lock text-[10px]"></i>
+                    <span>Panel Admin</span>
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/85 border-b border-slate-800/80 transition-all duration-300">
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/90 border-b border-slate-800/80 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center justify-between h-20 gap-4">
+                
                 <!-- Brand Logo -->
-                <a href="<?= base_url() ?>" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white shadow-xl shadow-primary/40 group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-bowl-food text-2xl text-amber-100"></i>
+                <a href="<?= base_url() ?>" class="flex items-center space-x-3.5 group flex-shrink-0">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-purple-800 border border-purple-500/30 flex items-center justify-center text-accent shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-bowl-food text-xl"></i>
                     </div>
                     <div>
-                        <div class="flex items-center space-x-1">
-                            <span class="font-display font-black text-2xl tracking-tight text-white group-hover:text-amber-300 transition-colors">Aprilianto's</span>
-                            <span class="font-display font-black text-2xl tracking-tight text-accent">Tinutuan</span>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="font-display font-extrabold text-2xl tracking-tight text-white group-hover:text-amber-300 transition-colors">Aprilianto's</span>
+                            <span class="font-display font-extrabold text-2xl tracking-tight text-accent">Tinutuan</span>
                         </div>
-                        <p class="text-[10px] tracking-widest uppercase font-bold text-purple-300">Authentic Manado Cuisine</p>
+                        <p class="text-[10px] tracking-wider uppercase font-semibold text-slate-400 mt-0.5">Autentik Manado</p>
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
-                    <a href="<?= base_url() ?>" class="text-white hover:text-accent transition-colors py-2 flex items-center space-x-1.5">
-                        <i class="fa-solid fa-house text-xs text-primary"></i>
-                        <span>Beranda</span>
+                <!-- Desktop Clean Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <a href="<?= base_url() ?>" class="px-3.5 py-2 rounded-xl text-sm font-semibold <?= uri_string() == '' ? 'text-white bg-slate-900/80' : 'text-slate-300 hover:text-white hover:bg-slate-900/50' ?> transition-colors">
+                        Beranda
                     </a>
-                    <a href="<?= base_url('menu') ?>" class="text-slate-300 hover:text-accent transition-colors py-2 flex items-center space-x-1.5">
-                        <i class="fa-solid fa-utensils text-xs text-accent"></i>
-                        <span>Katalog Menu</span>
+                    <a href="<?= base_url('menu') ?>" class="px-3.5 py-2 rounded-xl text-sm font-semibold <?= uri_string() == 'menu' ? 'text-white bg-slate-900/80' : 'text-slate-300 hover:text-white hover:bg-slate-900/50' ?> transition-colors">
+                        Katalog Menu
                     </a>
-                    <a href="<?= base_url() ?>#filosofi" class="text-slate-300 hover:text-accent transition-colors py-2 flex items-center space-x-1.5">
-                        <i class="fa-solid fa-seedling text-xs text-emerald-400"></i>
-                        <span>Filosofi Sehat</span>
+                    <a href="<?= base_url() ?>#filosofi" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/50 transition-colors">
+                        Filosofi
                     </a>
-                    <a href="<?= base_url() ?>#promo" class="text-slate-300 hover:text-accent transition-colors py-2 flex items-center space-x-1.5">
-                        <i class="fa-solid fa-tag text-xs text-rose-400"></i>
-                        <span>Paket Promo</span>
+                    <a href="<?= base_url() ?>#promo" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/50 transition-colors">
+                        Paket Promo
                     </a>
-                    <a href="<?= base_url() ?>#kontak" class="text-slate-300 hover:text-accent transition-colors py-2 flex items-center space-x-1.5">
-                        <i class="fa-solid fa-location-dot text-xs text-sky-400"></i>
-                        <span>Outlet Kami</span>
+                    <a href="<?= base_url() ?>#kontak" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/50 transition-colors">
+                        Outlet
                     </a>
                 </nav>
 
-                <!-- Action CTA & Admin Access -->
-                <div class="hidden sm:flex items-center space-x-4">
-                    <a href="<?= base_url('login') ?>" class="text-xs font-semibold px-4 py-2.5 rounded-xl border border-slate-700 hover:border-primary text-slate-300 hover:text-white bg-slate-900/80 transition-all flex items-center space-x-2">
-                        <i class="fa-solid fa-lock text-accent text-xs"></i>
-                        <span>Admin CRUD</span>
-                    </a>
-
-                    <a href="<?= base_url('menu') ?>" class="relative group overflow-hidden px-6 py-3 rounded-2xl bg-gradient-to-r from-primary to-purple-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-primary/40 hover:shadow-primary/70 transition-all duration-300 flex items-center space-x-2">
-                        <span class="relative z-10 flex items-center space-x-2">
-                            <i class="fa-solid fa-bag-shopping text-accent text-sm"></i>
-                            <span>Pesan Sekarang</span>
-                        </span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-accent to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <!-- Order Action Button -->
+                <div class="hidden sm:flex items-center space-x-3 flex-shrink-0">
+                    <a href="<?= base_url('menu') ?>" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-purple-600 hover:from-primary-light hover:to-primary text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-primary/30 transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-utensils text-accent text-xs"></i>
+                        <span>Pesan Menu</span>
                     </a>
                 </div>
 
                 <!-- Mobile Hamburger Button -->
-                <div class="flex lg:hidden items-center space-x-2">
-                    <a href="<?= base_url('login') ?>" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-accent text-sm">
+                <div class="flex md:hidden items-center space-x-2">
+                    <a href="<?= base_url('login') ?>" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-accent text-xs">
                         <i class="fa-solid fa-lock"></i>
                     </a>
-                    <button id="mobileMenuBtn" type="button" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white hover:text-accent transition-colors">
-                        <i class="fa-solid fa-bars-staggered text-xl"></i>
+                    <button id="mobileMenuBtn" type="button" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+                        <i class="fa-solid fa-bars text-lg"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Drawer -->
-        <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-800 bg-slate-950/95 backdrop-blur-2xl px-6 py-6 space-y-4">
-            <a href="<?= base_url() ?>" class="block py-2 text-sm font-bold text-white hover:text-accent">Beranda</a>
-            <a href="<?= base_url('menu') ?>" class="block py-2 text-sm font-bold text-slate-300 hover:text-accent">Katalog Menu & Filter</a>
-            <a href="<?= base_url() ?>#filosofi" class="block py-2 text-sm font-bold text-slate-300 hover:text-accent">Filosofi Sehat Tinutuan</a>
-            <a href="<?= base_url() ?>#promo" class="block py-2 text-sm font-bold text-slate-300 hover:text-accent">Paket Promo Komplit</a>
-            <a href="<?= base_url() ?>#kontak" class="block py-2 text-sm font-bold text-slate-300 hover:text-accent">Outlet & Kontak</a>
-            <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
-                <a href="<?= base_url('menu') ?>" class="w-full text-center py-3 bg-gradient-to-r from-primary to-purple-600 text-white font-bold rounded-xl text-sm shadow-md">
-                    <i class="fa-solid fa-bag-shopping mr-2 text-accent"></i> Pesan Menu Sekarang
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 backdrop-blur-2xl px-6 py-6 space-y-3">
+            <a href="<?= base_url() ?>" class="block py-2 text-sm font-semibold text-white hover:text-accent">Beranda</a>
+            <a href="<?= base_url('menu') ?>" class="block py-2 text-sm font-semibold text-slate-300 hover:text-accent">Katalog Menu & Filter</a>
+            <a href="<?= base_url() ?>#filosofi" class="block py-2 text-sm font-semibold text-slate-300 hover:text-accent">Filosofi Sehat</a>
+            <a href="<?= base_url() ?>#promo" class="block py-2 text-sm font-semibold text-slate-300 hover:text-accent">Paket Promo</a>
+            <a href="<?= base_url() ?>#kontak" class="block py-2 text-sm font-semibold text-slate-300 hover:text-accent">Outlet & Kontak</a>
+            <div class="pt-3 border-t border-slate-800 flex flex-col gap-2.5">
+                <a href="<?= base_url('menu') ?>" class="w-full text-center py-2.5 bg-gradient-to-r from-primary to-purple-600 text-white font-bold rounded-xl text-xs shadow-md">
+                    <i class="fa-solid fa-utensils mr-2 text-accent"></i> Pesan Menu Sekarang
                 </a>
-                <a href="<?= base_url('login') ?>" class="w-full text-center py-2.5 bg-slate-900 border border-slate-700 text-slate-300 font-semibold rounded-xl text-xs">
-                    <i class="fa-solid fa-lock mr-2 text-accent"></i> Panel Login Admin (CRUD)
+                <a href="<?= base_url('login') ?>" class="w-full text-center py-2 bg-slate-900 border border-slate-700 text-slate-300 font-medium rounded-xl text-xs">
+                    <i class="fa-solid fa-lock mr-2 text-accent"></i> Panel Admin
                 </a>
             </div>
         </div>
